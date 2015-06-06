@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <param name="/use_sim_time" value="true"/>
+
+  <node pkg="hector_exploration_node" type="exploration_planner_node" name="hector_exploration_node" output="screen">
+    <remap from="costmap" to="/planner/move_base/local_costmap/costmap"/>
+
+    <rosparam file="$(find hector_exploration_node)/config/costmap.yaml" command="load" />
+  </node>
+
+  <!--node pkg="hector_exploration_controller" type="simple_exploration_controller" name="hector_exploration_controller" output="screen">
+    <remap from="cmd_vel" to="/mybot/cmd_vel"/>
+  </node-->
+
+  <!--node pkg="mybot_control" type="hector_to_move_base.py" name="hector_to_move_base" output="screen">
+  </node-->
+
+</launch>

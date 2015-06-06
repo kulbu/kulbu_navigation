@@ -1,0 +1,8 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: kulbu_description
+    relative_path: urdf/kulbu.xacro
+  SRDF:
+    relative_path: config/kulbu.srdf
+  CONFIG:
+    generated_timestamp: 1430366377
